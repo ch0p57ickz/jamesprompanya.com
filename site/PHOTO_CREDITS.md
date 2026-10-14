@@ -15,5 +15,7 @@ The Lab cards use illustrative stock photos plus one photo supplied by James. Th
 | Site file | Photographer | Source | License |
 | --- | --- | --- | --- |
 | `dist/lab-benni.jpg` | James Prompanya | Photo supplied by James (Benni, the dog) | Personal use, used with permission |
-| `dist/lab-homelab.jpg` | Scott Rodgerson | [Colorful server cables and rack lights](https://images.unsplash.com/photo-1558494949-ef010cbdcc31) (`photo-1558494949-ef010cbdcc31`) | [Unsplash License](https://unsplash.com/license) |
-| `dist/lab-localllm.jpg` | Unsplash contributor (verify in source page) | [Two NVIDIA RTX 2080 graphics cards](https://images.unsplash.com/photo-1591405351990-4726e331f141) (`photo-1591405351990-4726e331f141`) | [Unsplash License](https://unsplash.com/license) |
+| `dist/lab-homelab.jpg` | Scott Rodgerson | [Colorful server cables and rack lights](https://unsplash.com/photos/1558494949-ef010cbdcc31) | [Unsplash License](https://unsplash.com/license) |
+| `dist/lab-localllm.jpg` | Unsplash contributor (unverified — see note below) | [Compact desktop PC on a desk with monitor and peripherals](https://unsplash.com/photos/1593640408182-31c70c8268f5) | [Unsplash License](https://unsplash.com/license) |
+
+> **Note:** The photographer for `lab-localllm.jpg` could not be confirmed at time of writing (Unsplash page blocked by bot protection). The source page link above resolves to the correct photo; update this row with the photographer name after visiting the page in a browser.

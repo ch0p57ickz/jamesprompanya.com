@@ -38,6 +38,12 @@
     .personal .section-link:disabled{opacity:.55;cursor:default}
     .personal .gallery-meta{margin:18px 0 0;font-size:.85rem;color:#5e6974}
     .personal-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+    .photography-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .running-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .running-intro{display:flex;flex-direction:column;justify-content:center;padding:18px;background:#fff8f2;border:1px solid #ead8cb;border-radius:8px}
+    .running-intro h3{margin:0 0 8px;font-size:1.1rem;letter-spacing:-.025em;color:#8f3517}
+    .running-intro p{margin:0;color:#5e6974;font-size:.9rem;line-height:1.5}
+    .section-emoji{display:inline-block;margin-right:10px;font-size:1.2rem;vertical-align:middle;line-height:1}
     .race-card{background:#fff;border:1px solid #e0e4e8;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;min-height:240px}
     .race-card .card-visual{height:140px;position:relative;background:linear-gradient(135deg,#ad3a14,#5a1e0a)}
     .race-card .card-visual::before{content:"";position:absolute;inset:-30%;background:repeating-linear-gradient(0deg,transparent 0 14px,#ffffff14 15px 16px);transform:rotate(-8deg)}
@@ -50,6 +56,9 @@
     .photo-card{aspect-ratio:4/3;border-radius:8px;overflow:hidden;border:1px solid #e0e4e8;background:linear-gradient(135deg,#f1d9c6,#e2b88b);position:relative}
     .photo-card img{display:block;width:100%;height:100%;object-fit:cover}
     .photo-card::after{content:none}
+    .photo-info{display:flex;flex-direction:column;justify-content:center;padding:18px;background:#fff8f2;border:1px solid #ead8cb;border-radius:8px}
+    .photo-info h3{margin:0 0 8px;font-size:1.02rem;color:#8f3517}
+    .photo-info p{margin:0;color:#5e6974;font-size:.88rem;line-height:1.5}
     .setup-card{background:#fff;border:1px solid #e0e4e8;border-radius:8px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:8px;min-height:170px}
     .setup-card h3{margin:0;font-size:1.02rem;letter-spacing:-.025em;color:#193a5b}
     .setup-card p{margin:0;font-size:.88rem;color:#5e6974;line-height:1.5}
@@ -60,10 +69,16 @@
     [data-theme=dark] .race-card .race-time{color:#eaf0f4}
     [data-theme=dark] .race-card .race-meta,[data-theme=dark] .setup-card p,[data-theme=dark] .gallery-meta{color:#b9c4cb}
     [data-theme=dark] .photo-card{border-color:#394651;background:linear-gradient(135deg,#3a2c20,#2a1f18)}
+    [data-theme=dark] .running-intro{background:#302822;border-color:#594234}
+    [data-theme=dark] .running-intro h3{color:#f0b187}
+    [data-theme=dark] .running-intro p{color:#b9c4cb}
+    [data-theme=dark] .photo-info{background:#302822;border-color:#594234}
+    [data-theme=dark] .photo-info h3{color:#f0b187}
+    [data-theme=dark] .photo-info p{color:#b9c4cb}
     @media(min-width:651px) and (max-width:900px){.personal .hero-photo{object-position:center 17.29%}}
-    .lab-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.lab-card{background:#fff;border:1px solid #e0e4e8;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;min-height:240px}.lab-card .card-visual{height:150px;background:#14283c}.lab-card .card-visual.photo::before{display:none}.lab-card .card-visual.photo img{display:block;width:100%;height:100%;object-fit:cover}.lab-card .card-body{padding:14px 16px;display:flex;flex-direction:column;flex:1;gap:8px}.lab-card h3{margin:0;font-size:1.02rem;letter-spacing:-.025em;color:#193a5b}.lab-card p{margin:0;font-size:.88rem;color:#5e6974;line-height:1.5}[data-theme=dark] .lab-card{background:#25303a;border-color:#394651}[data-theme=dark] .lab-card h3{color:#eaf0f4}[data-theme=dark] .lab-card p{color:#b9c4cb}
-@media(max-width:900px){.personal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lab-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:650px){.professional .hero-photo{min-height:300px;max-height:360px;object-position:center 35%}.personal .hero-photo{min-height:300px;max-height:360px;object-position:center 17.29%}.personal-grid{grid-template-columns:1fr}.lab-grid{grid-template-columns:1fr}.race-card,.setup-card,.lab-card{min-height:0}.photo-card{aspect-ratio:3/2}}
+    .lab-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.lab-card{background:#fff;border:1px solid #e0e4e8;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;min-height:240px}.lab-card .card-visual{height:150px;background:#14283c}.lab-card .card-visual.photo::before{display:none}.lab-card .card-visual.photo img{display:block;width:100%;height:100%;object-fit:cover}.lab-card .card-visual.photo img.benni-photo{object-position:50% 35%}.lab-card .card-body{padding:14px 16px;display:flex;flex-direction:column;flex:1;gap:8px}.lab-card h3{margin:0;font-size:1.02rem;letter-spacing:-.025em;color:#193a5b}.lab-card p{margin:0;font-size:.88rem;color:#5e6974;line-height:1.5}[data-theme=dark] .lab-card{background:#25303a;border-color:#394651}[data-theme=dark] .lab-card h3{color:#eaf0f4}[data-theme=dark] .lab-card p{color:#b9c4cb}
+@media(max-width:900px){.personal-grid,.running-grid,.photography-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.running-intro,.photo-info{grid-column:1/-1}.lab-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lab-card:last-child{grid-column:1/-1}}
+    @media(max-width:650px){.professional .hero-photo{min-height:300px;max-height:360px;object-position:center 35%}.personal .hero-photo{min-height:300px;max-height:360px;object-position:center 17.29%}.personal-grid,.running-grid,.photography-grid{grid-template-columns:1fr}.lab-grid{grid-template-columns:1fr}.race-card,.setup-card,.lab-card{min-height:0}.photo-card{aspect-ratio:3/2}}
   </style>
 </head>
 <body>
@@ -85,26 +100,26 @@
     <div class="view professional" id="professional" role="tabpanel" aria-labelledby="professional-tab">
       <section class="hero" aria-labelledby="professional-heading">
         <div class="hero-art"><img class="hero-photo" src="./james-header.jpg" alt="James Prompanya smiling for a photo with a child" width="1600" height="1200" fetchpriority="high"></div>
-        <div class="hero-copy"><div class="eyebrow">James Prompanya</div><h1 id="professional-heading">I build systems that help engineers move faster.</h1><p>Engineering leader focused on the people, platforms, and infrastructure behind large-scale products. I provide technical direction, mentorship, and leadership on Pokémon GO at Scopely Explore.</p><ul class="hero-tags" aria-label="Areas of expertise"><li>Engineering Leadership</li><li>Agentic Coding Process</li></ul><ul class="hero-tags" aria-label="Areas of focus"><li>Infrastructure Engineering</li><li>Internal Tools</li><li>Site Reliability Engineering</li></ul><div class="hero-actions"><a class="button" href="#work">Explore my work</a><a class="plain-link" href="https://www.linkedin.com/in/jamesprompanya" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></div><div class="meta">Director of Engineering · Scopely Explore (formerly Niantic)<span class="hero-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>San Francisco Bay Area, CA</span></div></div>
+        <div class="hero-copy"><div class="eyebrow">James Prompanya</div><h1 id="professional-heading">I build systems that help engineers move faster.</h1><p>Engineering leader focused on the people, platforms, and infrastructure behind planet-scale games and services at Scopely Explore. I provide technical direction, mentorship, and leadership on Pokémon GO.</p><ul class="hero-tags" aria-label="Areas of expertise"><li>Engineering Leadership</li><li>Agentic Coding Process</li></ul><ul class="hero-tags" aria-label="Areas of focus"><li>Infrastructure Engineering</li><li>Internal Tools</li><li>Site Reliability Engineering</li></ul><div class="hero-actions"><a class="button" href="#work">Explore my work</a><a class="plain-link" href="https://www.linkedin.com/in/jamesprompanya" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></div><div class="meta">Director of Engineering · Scopely Explore (formerly Niantic, Inc.)<span class="hero-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>San Francisco Bay Area, CA</span></div></div>
       </section>
-      <section class="section" id="work" aria-labelledby="work-heading"><div class="section-head"><div><span class="section-label">01 /</span><h2 id="work-heading">Selected work</h2></div><span class="section-note">Leadership, tools, and reliability</span></div><div class="cards">
+      <section class="section" id="work" aria-labelledby="work-heading"><div class="section-head"><div><h2 id="work-heading">Selected work</h2></div><span class="section-note">Leadership, tools, and reliability</span></div><div class="cards">
         <article class="card"><div class="card-visual photo"><img src="./work-ai-development.jpg" alt="Illustrative stock photo of a coding workspace with multiple screens" width="1200" height="675" loading="lazy"></div><div class="card-body"><h3>AI-assisted development</h3><p>Led adoption of agentic workflows on Pokémon GO, establishing retrieval-augmented generation patterns and a practical approach to AI-assisted coding.</p><div class="tag-row"><span class="tag">AI workflows</span><span class="tag">RAG</span><span class="tag">Developer experience</span></div><details class="detail"><summary>More about this work</summary><p>Helped developers distinguish useful AI assistance from unreviewed code generation, while aligning leadership expectations with the realities of engineering practice.</p></details></div></article>
         <article class="card"><div class="card-visual photo"><img class="process-photo" src="./work-process-modernization.jpg" alt="Illustrative stock photo of a person drawing a process flowchart on a whiteboard" width="1200" height="800" loading="lazy"></div><div class="card-body"><h3>Tooling and infrastructure modernization</h3><p>Leading improvements to Pokémon GO’s decade-old infrastructure through better tools and automated processes.</p><div class="tag-row"><span class="tag">Infrastructure</span><span class="tag">Automation</span><span class="tag">Tooling</span></div><details class="detail"><summary>More about this work</summary><p>The goal is to reduce manual work for engineers, site reliability engineers, and release managers, while lowering the chance of human error.</p></details></div></article>
         <article class="card"><div class="card-visual photo"><img src="./work-resiliency.jpg" alt="Illustrative stock photo of illuminated server rack components" width="1200" height="798" loading="lazy"></div><div class="card-body"><h3>Infrastructure resiliency</h3><p>Guiding work to minimize downtime and keep workloads scaling through major events and machine stock outages.</p><div class="tag-row"><span class="tag">Resiliency</span><span class="tag">Scale</span><span class="tag">Operations</span></div><details class="detail"><summary>More about this work</summary><p>Resource availability has become harder to predict. The work centers on keeping services dependable as demand and available capacity change.</p></details></div></article>
       </div></section>
-      <section class="section" aria-labelledby="approach-heading"><div class="section-head"><div><span class="section-label">02 /</span><h2 id="approach-heading">How I work</h2></div></div><div class="principles"><div class="principle"><span aria-hidden="true">◇</span><h3>Make the useful path easier.</h3><p>Invest in tools and processes that give engineers more time to solve problems.</p></div><div class="principle"><span aria-hidden="true">⌁</span><h3>Bring people along.</h3><p>Pair technical direction with mentorship and realistic expectations.</p></div><div class="principle"><span aria-hidden="true">◎</span><h3>Design for pressure.</h3><p>Plan for scale, outages, and the human side of operating live systems.</p></div></div></section>
-      <section class="section" aria-labelledby="background-heading"><div class="section-head"><div><span class="section-label">03 /</span><h2 id="background-heading">Background</h2></div></div><div class="timeline"><div class="timeline-item"><span class="company-mark scopely"><img src="./brands/scopely-explore.png" alt="Scopely Explore logo" width="512" height="288" loading="lazy"></span><div><b>Scopely Explore</b><span>Director of Engineering · Pokémon GO</span></div></div><div class="timeline-item"><span class="company-mark"><img src="./brands/niantic.svg" alt="Niantic logo" width="60" height="72" loading="lazy"></span><div><b>Niantic</b><span>Engineering leadership and software engineering</span></div></div><div class="timeline-item"><span class="company-mark microsoft"><img src="./brands/microsoft.svg" alt="Microsoft logo" width="21" height="21" loading="lazy"></span><div><b>Microsoft</b><span>Software engineering</span></div></div></div></section>
+      <section class="section" aria-labelledby="approach-heading"><div class="section-head"><div><h2 id="approach-heading">How I work</h2></div></div><div class="principles"><div class="principle"><span aria-hidden="true">◇</span><h3>Make the useful path easier.</h3><p>Invest in tools and processes that give engineers more time to solve problems.</p></div><div class="principle"><span aria-hidden="true">⌁</span><h3>Bring people along.</h3><p>Pair technical direction with mentorship and realistic expectations.</p></div><div class="principle"><span aria-hidden="true">◎</span><h3>Design for pressure.</h3><p>Plan for scale, outages, and the human side of operating live systems.</p></div></div></section>
+      <section class="section" aria-labelledby="background-heading"><div class="section-head"><div><h2 id="background-heading">Background</h2></div></div><div class="timeline"><div class="timeline-item"><span class="company-mark scopely"><img src="./brands/scopely-explore.png" alt="Scopely Explore logo" width="512" height="288" loading="lazy"></span><div><b>Scopely Explore</b><span>Director of Engineering · Pokémon GO</span></div></div><div class="timeline-item"><span class="company-mark"><img src="./brands/niantic.svg" alt="Niantic logo" width="60" height="72" loading="lazy"></span><div><b>Niantic</b><span>Engineering leadership and software engineering</span></div></div><div class="timeline-item"><span class="company-mark microsoft"><img src="./brands/microsoft.svg" alt="Microsoft logo" width="21" height="21" loading="lazy"></span><div><b>Microsoft</b><span>Software engineering</span></div></div></div></section>
     </div>
 
     <div class="view personal" id="personal" role="tabpanel" aria-labelledby="personal-tab" hidden>
-      <section class="hero" aria-labelledby="personal-heading"><div class="hero-art"><img class="hero-photo" src="./personal-header.jpg" alt="Portrait of James Prompanya" width="900" height="1200" loading="lazy" decoding="async"></div><div class="hero-copy"><div class="eyebrow">The personal side</div><h1 id="personal-heading">Software engineer. Marathoner. Gamer. Tinkerer.</h1><p>Outside engineering leadership, I spend time running, taking photos, and experimenting with local AI agents.</p><div class="hero-actions"><a class="button" href="#interests">Explore my interests</a><a class="plain-link" href="https://www.linkedin.com/in/jamesprompanya" target="_blank" rel="noopener noreferrer">Professional profile ↗</a></div></div></section>
+      <section class="hero" aria-labelledby="personal-heading"><div class="hero-art"><img class="hero-photo" src="./personal-header.jpg" alt="Portrait of James Prompanya" width="900" height="1200" loading="lazy" decoding="async"></div><div class="hero-copy"><div class="eyebrow">The personal side</div><h1 id="personal-heading">Software engineer. Marathoner. Gamer. Tinkerer.</h1><p>Outside engineering leadership, I spend time running, taking photos, playing games, and experimenting with local AI agents.</p><div class="hero-actions"><a class="button" href="#interests">Explore my interests</a><a class="plain-link" href="https://www.linkedin.com/in/jamesprompanya" target="_blank" rel="noopener noreferrer">Professional profile ↗</a></div></div></section>
       <div class="personal-sections" id="interests" role="group" aria-label="Interests">
         <section class="section" id="running" aria-labelledby="running-heading">
           <div class="section-head">
-            <div class="section-meta"><div><span class="section-label">01 /</span><h2 id="running-heading">Running</h2></div><button type="button" class="section-link" disabled>View all runs →</button></div>
-            <p class="section-lead">A reason to get outside, find a rhythm, and keep going a little farther.</p>
+            <div class="section-meta"><div><h2 id="running-heading"><span class="section-emoji" aria-hidden="true">🏃</span>Running</h2></div><button type="button" class="section-link" disabled hidden>View all runs →</button></div>
           </div>
-          <div class="personal-grid">
+          <div class="personal-grid running-grid">
+            <div class="running-intro"><h3>26.2 and beyond</h3><p>A reason to get outside, find a rhythm, and keep going a little farther.</p></div>
             <article class="race-card"><div class="card-visual photo"><img src="./run-sf-2026.jpg" alt="James running the 2026 San Francisco Marathon" width="1200" height="600" loading="lazy" decoding="async"></div><div class="card-body"><h3>San Francisco Marathon</h3><div class="race-meta"><span>2026</span><span class="race-time">4:27:44</span></div></div></article>
             <article class="race-card"><div class="card-visual photo"><img src="./run-kyoto-2026.jpg" alt="James running the 2026 Kyoto Marathon" width="1200" height="600" loading="lazy" decoding="async"></div><div class="card-body"><h3>Kyoto Marathon</h3><div class="race-meta"><span>2026</span><span class="race-time">5:11:56</span></div></div></article>
             <article class="race-card"><div class="card-visual photo"><img src="./run-sf-2025.jpg" alt="James running the 2025 San Francisco Marathon" width="1200" height="600" loading="lazy" decoding="async"></div><div class="card-body"><h3>San Francisco Marathon</h3><div class="race-meta"><span>2025</span><span class="race-time">4:23:22</span></div></div></article>
@@ -113,19 +128,20 @@
         </section>
         <section class="section" id="photography" aria-labelledby="photography-heading">
           <div class="section-head">
-            <div class="section-meta"><div><span class="section-label">02 /</span><h2 id="photography-heading">Photography</h2></div><button type="button" class="section-link" disabled>View gallery →</button></div>
+            <div class="section-meta"><div><h2 id="photography-heading"><span class="section-emoji" aria-hidden="true">📷</span>Photography</h2></div><button type="button" class="section-link" disabled hidden>View gallery →</button></div>
             <p class="section-lead">Collecting moments, places, and details that are easy to miss when moving too quickly.</p>
           </div>
-          <div class="personal-grid" role="group" aria-label="Photography samples">
+          <div class="personal-grid photography-grid" role="group" aria-label="Photography samples and camera">
             <div class="photo-card"><img src="./DSC00005.jpeg" alt="Tabby cat with a bell collar resting on a wooden floor" width="1024" height="681" loading="lazy" decoding="async"></div>
             <div class="photo-card"><img src="./DSC00284.jpeg" alt="Tricolor dog with a white blaze looking directly at the camera" width="1024" height="681" loading="lazy" decoding="async"></div>
             <div class="photo-card"><img src="./DSC00454.jpeg" alt="Two girls whispering to each other at a pumpkin patch, one in a white shirt with a tiny pumpkin balanced on her head" width="683" height="1024" loading="lazy" decoding="async"></div>
-            <div class="photo-card"><img src="./DSC00524.jpeg" alt="Child running away down a fenced pedestrian bridge at golden hour" width="1024" height="819" loading="lazy" decoding="async"></div>
+            <div class="photo-card"><img src="./DSC00524.jpeg" alt="Child running away down a fenced pedestrian bridge at golden hour" width="1024" height="684" loading="lazy" decoding="async"></div>
+            <div class="photo-info"><h3>Sony a6700</h3><p>Pets · Family · Travel · Nature</p></div>
           </div>
         </section>
         <section class="section" id="lab" aria-labelledby="lab-heading">
           <div class="section-head">
-            <div class="section-meta"><div><span class="section-label">03 /</span><h2 id="lab-heading">The Lab</h2></div><button type="button" class="section-link" disabled>See my setup →</button></div>
+            <div class="section-meta"><div><h2 id="lab-heading"><span class="section-emoji" aria-hidden="true">🔧</span>The Lab</h2></div><button type="button" class="section-link" disabled hidden>See my setup →</button></div>
             <p class="section-lead">Exploring what local AI agents can do when they run on my own hardware and fit into real workflows.</p>
           </div>
           <div class="lab-grid">
@@ -133,12 +149,12 @@
               <div class="card-visual photo"><img src="./lab-homelab.jpg" alt="Colorful network cables and rack lights in a server closet" width="1200" height="673" loading="lazy" decoding="async"></div>
               <div class="card-body">
                 <h3>HomeLab</h3>
-                <p>ProxMox, Pi-hole, Home Assistant, Plex, and a rotating collection of self-hosted services tucked into a closet rack.</p>
-                <div class="tag-row"><span class="tag">ProxMox</span><span class="tag">Pi-hole</span><span class="tag">Home Assistant</span><span class="tag">Plex</span></div>
+                <p>Proxmox, Pi-hole, Home Assistant, Plex, and a rotating collection of self-hosted services running under my desk.</p>
+                <div class="tag-row"><span class="tag">Proxmox</span><span class="tag">Pi-hole</span><span class="tag">Home Assistant</span><span class="tag">Plex</span></div>
               </div>
             </article>
             <article class="lab-card">
-              <div class="card-visual photo"><img src="./lab-localllm.jpg" alt="Two NVIDIA RTX 2080 graphics cards side by side on a dark surface" width="1200" height="800" loading="lazy" decoding="async"></div>
+              <div class="card-visual photo"><img src="./lab-localllm.jpg" alt="Compact desktop computer on a wooden desk beside a curved monitor and RGB keyboard" width="1200" height="827" loading="lazy" decoding="async"></div>
               <div class="card-body">
                 <h3>Local LLM</h3>
                 <p>An Asus Ascent GX10 dedicated to running open-weight models locally for development, evaluation, and experimentation.</p>
@@ -146,10 +162,10 @@
               </div>
             </article>
             <article class="lab-card">
-              <div class="card-visual photo"><img src="./lab-benni.jpg" alt="Benni, a small brown and white dog wearing a colorful bandana with cartoon characters" width="1254" height="1254" loading="lazy" decoding="async"></div>
+              <div class="card-visual photo"><img class="benni-photo" src="./lab-benni.jpg" alt="Benni, a small brown and white dog wearing a colorful bandana with cartoon characters" width="1254" height="1254" loading="lazy" decoding="async"></div>
               <div class="card-body">
                 <h3>Benni</h3>
-                <p>A custom-built personal AI assistant named after the household supervisor — currently running, occasionally supervising.</p>
+                <p>A custom-built personal AI assistant named in memory of the first and former household supervisor — built specifically for me and my family.</p>
                 <div class="tag-row"><span class="tag">Custom assistant</span><span class="tag">Local + remote</span></div>
               </div>
             </article>
